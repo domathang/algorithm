@@ -14,7 +14,7 @@ int main()
 		v.push_back({endT, startT});
 	}
 	sort(v.begin(), v.end());
-	
+
 	int x;
 	x = v[0].first;
 
@@ -24,6 +24,6 @@ int main()
 			x = v[i].first;
 		}
 	}
-	
+
 	cout << cnt;
 }

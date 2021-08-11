@@ -40,11 +40,11 @@ void dfs(int k)
  	 dfs(k + 1);
  	 v[1].pop_back();
   }
+	
 }
 
 int main()
 {
-  int k;
   scanf("%d", &n);
 
   for (int i = 1; i <= n; i++)

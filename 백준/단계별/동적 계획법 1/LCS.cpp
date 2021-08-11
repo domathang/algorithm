@@ -14,7 +14,6 @@ int main()
 	cin >> seq2;
 	
 	int len1 = strlen(seq1), len2 = strlen(seq2);
-	int n=0;
 
 	for(int i=1; i<=len1; i++) {
 		for(int j=1; j<=len2; j++) {
