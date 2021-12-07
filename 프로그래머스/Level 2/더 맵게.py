@@ -7,11 +7,11 @@ def solution(scoville, K):
     while True:
         s1 = heapq.heappop(scoville)
 
-        if len(scoville) == 0 and s1 < K:
-            return -1
-
         if s1 >= K:
             return answer
+
+        if len(scoville) == 0:
+            return -1
 
         s2 = heapq.heappop(scoville)
 
