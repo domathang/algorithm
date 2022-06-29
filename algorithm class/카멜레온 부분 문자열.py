@@ -2,7 +2,6 @@ s = input()
 
 if len(s) == 1:
     print(-1)
-
 else:
     s1 = s[:-1]
     s2 = s[1:]
