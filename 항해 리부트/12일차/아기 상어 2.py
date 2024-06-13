@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 space = [list(map(int, input().split())) for _ in range(n)]
-ny = [-1, -1, 0, 1, 1, 1, 0, -1]
-nx = [0, 1, 1, 1, 0, -1, -1, -1]
+dy = [-1, -1, 0, 1, 1, 1, 0, -1]
+dx = [0, 1, 1, 1, 0, -1, -1, -1]
 
 def safe(i, j):
     if -1 < i < n and -1 < j < m:
@@ -18,11 +18,11 @@ def bfs(i, j):
         if space[p[0]][p[1]] == 1:
             return p[2]
         for k in range(8):
-            next_y = p[0] + ny[k]
-            next_x = p[1] + nx[k]
-            if safe(next_y, next_x) and visited[next_y][next_x] == 0:
-                q.append((next_y, next_x, p[2] + 1))
-                visited[next_y][next_x] = 1
+            ny = p[0] + dy[k]
+            nx = p[1] + dx[k]
+            if safe(ny, nx) and visited[ny][nx] == 0:
+                q.append((ny, nx, p[2] + 1))
+                visited[ny][nx] = 1
 
 answer = 0
 
